@@ -11,8 +11,12 @@ person, ownership, sender authenticity, message meaning, or DNS resolution.
 Unlisted suffixes retain the lexical hierarchy but have no asserted public
 suffix or registrable domain. No network access or source text is retained.
 
-This package does not depend on sem-lang, Hatter, Graph storage, or a UI.
-
 ## License
 
 Apache-2.0. Copyright 2026 HAT Inc. See [LICENSE](LICENSE) and [NOTICE](NOTICE). External dependencies retain their respective licenses.
+
+## Package integration
+
+The package is an independently consumable unit. Callers reference its documented
+interface through a versioned dependency and own application-specific composition
+and integration.
