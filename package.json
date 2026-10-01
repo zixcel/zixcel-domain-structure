@@ -1,0 +1,27 @@
+{
+  "name": "@zixcel/domain-structure",
+  "version": "0.10.0",
+  "type": "module",
+  "license": "Apache-2.0",
+  "description": "Bounded, deterministic DNS-name hierarchy and public-suffix projection",
+  "files": [
+    "src",
+    "README.md",
+    "repository.toml",
+    "!**/*.tgz",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.d.mts",
+      "import": "./src/index.mjs"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "tldts": "7.4.13"
+  }
+}
