@@ -1,22 +1,29 @@
 # @zixcel/domain-structure
 
-Deterministic, bounded DNS-name hierarchy for source adapters. It uses the
-packaged public-suffix ruleset (`tldts@7.4.13`, including private suffixes) and
-returns graph-ready nodes and `dns-subdomain-of` edges. The ruleset version is
-part of the result so a later ruleset update cannot silently reinterpret old
-observations.
+Split a DNS name into a useful hierarchy while respecting public and private suffix rules.
 
-`registrableDomain` is a public-suffix boundary, not a claim about a company,
-person, ownership, sender authenticity, message meaning, or DNS resolution.
-Unlisted suffixes retain the lexical hierarchy but have no asserted public
-suffix or registrable domain. No network access or source text is retained.
+## What you can do
 
-## License
+- Normalize and classify domain-name parts.
+- Produce nodes and edges for a domain-structure view.
 
-Apache-2.0. Copyright 2026 HAT Inc. See [LICENSE](LICENSE) and [NOTICE](NOTICE). External dependencies retain their respective licenses.
+## Current scope
 
-## Package integration
+The package parses names. It does not resolve DNS or establish ownership of a domain.
 
-The package is an independently consumable unit. Callers reference its documented
-interface through a versioned dependency and own application-specific composition
-and integration.
+Package distribution is not activated by this documentation. Use the checked-in source and the declared dependency versions; published availability must be verified separately.
+
+## Getting started
+
+Use the package manager matching the checked-in lockfile and the Node.js version declared in `package.json` or the development configuration. Run from this repository:
+
+```sh
+pnpm install --frozen-lockfile
+pnpm test
+```
+
+## Documentation and source
+
+[Usage guide](docs/getting-started.md)
+
+[Implementation and public interfaces](src) · [Verification cases](test) · [Contributing](CONTRIBUTING.md) · [Security reporting](SECURITY.md) · [License](LICENSE) · [Attribution notices](NOTICE)
