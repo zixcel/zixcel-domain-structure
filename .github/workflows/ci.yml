@@ -21,4 +21,7 @@ jobs:
         run: npm install --global pnpm@10.29.3 --ignore-scripts
       - name: Install locked dependencies without lifecycle scripts
         run: pnpm install --frozen-lockfile --ignore-scripts
-      - run: node --test test/*.test.mjs
+      - run: pnpm run typecheck
+      - run: pnpm test
+      - run: pnpm pack
+      - run: pnpm audit --audit-level=low
