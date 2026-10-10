@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { analyzeDomain } from '../src/index.mjs'
+import { analyzeDomain } from '../dist/index.mjs'
 
 test('builds a deterministic DNS graph without inferring a company', () => {
   const graph = analyzeDomain('mail.example.co.jp')
+  assert.ok(graph)
   assert.equal(graph.publicSuffix, 'co.jp')
   assert.equal(graph.registrableDomain, 'example.co.jp')
   assert.equal(graph.suffixAuthority, 'icann')
@@ -18,13 +19,22 @@ test('builds a deterministic DNS graph without inferring a company', () => {
 
 test('private suffix is a boundary; unlisted suffix and malformed input stay unknown', () => {
   const privateName = analyzeDomain('team.github.io')
+  assert.ok(privateName)
   assert.equal(privateName.suffixAuthority, 'private')
   assert.equal(privateName.publicSuffix, 'github.io')
   assert.equal(privateName.registrableDomain, 'team.github.io')
   const unlisted = analyzeDomain('person.example.invalid')
+  assert.ok(unlisted)
   assert.equal(unlisted.suffixAuthority, 'unlisted')
   assert.equal(unlisted.registrableDomain, null)
   for (const bad of ['example.com.evil@attacker.test', '.example.com', 'EXAMPLE.COM', 'a..com', 'localhost']) {
     assert.equal(analyzeDomain(bad), null)
+  }
+})
+
+
+test('unknown input is bounded and is never implicitly converted to a domain', () => {
+  for (const value of [null, undefined, 1, {}, [], true, 'a'.repeat(254), 'a'.repeat(64) + '.com']) {
+    assert.equal(analyzeDomain(value), null)
   }
 })

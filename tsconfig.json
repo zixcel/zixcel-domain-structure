@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "declaration": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "types": [],
+    "lib": [
+      "ES2022"
+    ],
+    "erasableSyntaxOnly": true
+  },
+  "include": [
+    "src/**/*.mts"
+  ]
+}

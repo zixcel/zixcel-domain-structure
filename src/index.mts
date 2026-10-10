@@ -1,9 +1,11 @@
 import { parse } from 'tldts'
+import type { DomainHierarchy, DomainNode, DomainEdge } from './types/domain.mjs'
+export type * from './types/domain.mjs'
 
 const RULESET = 'tldts@7.4.13'
 
 /** DNS hierarchy, not an ownership, company, trust, or sender-authentication assertion. */
-export function analyzeDomain(domain) {
+export function analyzeDomain(domain: unknown): DomainHierarchy | null {
   if (typeof domain !== 'string' || domain.length < 3 || domain.length > 253 ||
     domain !== domain.trim() || domain !== domain.toLowerCase() ||
     !/^[a-z0-9.-]+$/.test(domain) || !domain.includes('.') ||
@@ -15,8 +17,8 @@ export function analyzeDomain(domain) {
   const publicSuffix = suffixAuthority === 'unlisted' ? null : parsed.publicSuffix
   const registrableDomain = suffixAuthority === 'unlisted' ? null : parsed.domain
   const parts = domain.split('.')
-  const nodes = []
-  const edges = []
+  const nodes: DomainNode[] = []
+  const edges: DomainEdge[] = []
   for (let index = parts.length - 1; index >= 0; index -= 1) {
     const name = parts.slice(index).join('.')
     const parent = index < parts.length - 1 ? parts.slice(index + 1).join('.') : null

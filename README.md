@@ -27,3 +27,14 @@ pnpm test
 [Usage guide](docs/getting-started.md)
 
 [Implementation and public interfaces](src) · [Verification cases](test) · [Contributing](CONTRIBUTING.md) · [Security reporting](SECURITY.md) · [License](LICENSE) · [Attribution notices](NOTICE)
+
+## Typed development
+
+Use Node 24.15 or later and pnpm 10.29.3. Public contract types live in `src/types`; package ESM and declarations are emitted together in `dist`.
+
+```sh
+pnpm install --frozen-lockfile --ignore-scripts
+pnpm run typecheck
+pnpm test
+pnpm pack
+```
