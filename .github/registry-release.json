@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "repository": "zixcel/zixcel-domain-structure",
+  "defaultBranch": "main",
+  "requiredWorkflows": [
+    "ci.yml",
+    "oss-policy.yml"
+  ],
+  "packages": [
+    {
+      "ecosystem": "npm",
+      "manifest": "package.json",
+      "name": "@zixcel/domain-structure",
+      "installDirectory": "."
+    }
+  ]
+}
