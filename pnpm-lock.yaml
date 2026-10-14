@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       tldts:
-        specifier: 7.4.13
-        version: 7.4.13
+        specifier: 7.4.18
+        version: 7.4.18
     devDependencies:
       '@types/node':
         specifier: 24.19.2
@@ -24,11 +24,11 @@ packages:
   '@types/node@24.19.2':
     resolution: {integrity: sha512-93d49wCWJkCyN87MxLpNN6KXPCwFw7bVUg79mGUV1OS40JGWwVCr8n61DXCSqz7CV6/VfPkb7xec7uP2M+QHWQ==}
 
-  tldts-core@7.4.13:
-    resolution: {integrity: sha512-mbYsrih5FRtGxs3Usvl/PqwJsNpp+jsmrdFviiK02teHDG0/HebBG/pqCylje3kzgXYzuLoHJF/0mz9W53t8Xg==}
+  tldts-core@7.4.18:
+    resolution: {integrity: sha512-KI2PKvCmvQI/xD6ypPqkU0i7oxNXR/O58RLRaHR4svsgVUQ2JE/XC8BtMbG6PSehD27I8sZJRcC1ASnCy6lp3g==}
 
-  tldts@7.4.13:
-    resolution: {integrity: sha512-iHtaIWWIbMDkCeJdTBzZFGgbluE5J+oHlb2g7+oAz1S1gpuVpabRZdQyd471Vl8UUkcz2vXSL8xZH2kyCe8tfA==}
+  tldts@7.4.18:
+    resolution: {integrity: sha512-somxA8xKAUzlAxl0TX/jMSYIbRNFIVGnI96pVGJPeMc5BsHmfVXn6mOJT6U++ELnl04eGfzpfcEuZe8WiASkXg==}
     hasBin: true
 
   typescript@5.9.3:
@@ -45,11 +45,11 @@ snapshots:
     dependencies:
       undici-types: 7.24.6
 
-  tldts-core@7.4.13: {}
+  tldts-core@7.4.18: {}
 
-  tldts@7.4.13:
+  tldts@7.4.18:
     dependencies:
-      tldts-core: 7.4.13
+      tldts-core: 7.4.18
 
   typescript@5.9.3: {}
 
