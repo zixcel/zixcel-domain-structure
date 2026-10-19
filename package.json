@@ -41,5 +41,12 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zixcel/zixcel-domain-structure.git"
-  }
+  },
+  "keywords": [
+    "dns",
+    "public-suffix-list",
+    "idna",
+    "domain-names",
+    "typescript"
+  ]
 }
