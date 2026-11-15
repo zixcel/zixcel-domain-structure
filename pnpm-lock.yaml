@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       tldts:
-        specifier: 7.4.19
-        version: 7.4.19
+        specifier: 7.4.28
+        version: 7.4.28
     devDependencies:
       '@types/node':
         specifier: 24.19.2
@@ -144,11 +144,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  tldts-core@7.4.19:
-    resolution: {integrity: sha512-goNXV6Ho9TIOfpJZanTd6CKG5DyYgYAL+k+22T0SLh8l6+KHIfBUPFuePuSZv05UttIaaLmI9tb7TmGIdK5AkQ==}
+  tldts-core@7.4.28:
+    resolution: {integrity: sha512-6qKNYXYQfPNmAcmBpT/MrYPia3X2uBKxduTBSG0gLE9aN8FJTcS1ILsnJ6sqOvR/NZxkORzwGiSUVtnu3HUSqg==}
 
-  tldts@7.4.19:
-    resolution: {integrity: sha512-48dH6aSpQnpbzDUc4vIQZ1VjB8tkK+e8c1yx05/SZK+rkssgjEOlxDd/yU8/a4vGYQ9vRgJr9dwMq9TJ0b3X2Q==}
+  tldts@7.4.28:
+    resolution: {integrity: sha512-zbyA+C3nBymq7u4gZnKShj7RcyxJuQy66VRF9V9Zx8g1Jl8ui+9DVbV6knlRKaqKX6nSvhhy7D7KM75A6uVf6g==}
     hasBin: true
 
   typescript@7.0.2:
@@ -225,11 +225,11 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  tldts-core@7.4.19: {}
+  tldts-core@7.4.28: {}
 
-  tldts@7.4.19:
+  tldts@7.4.28:
     dependencies:
-      tldts-core: 7.4.19
+      tldts-core: 7.4.28
 
   typescript@7.0.2:
     optionalDependencies:
